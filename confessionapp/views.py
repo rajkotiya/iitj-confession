@@ -24,7 +24,7 @@ def creatpost(request):
         if user.is_authenticated:
             Confession=conf(img=imeage, desc=decreption,email=user.email)
             Confession.save();
-            messages,info(request,'confession has been saved')
+            messages.info(request,'confession has been saved')
         else:
             messages.info(request, 'Please login for confession')
     else:
